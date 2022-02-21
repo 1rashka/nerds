@@ -98,8 +98,22 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
+.red {
+  background-color: #fb565a;
+}
+.red:hover {
+  background-color: #e74246;
+}
+.red:focus {
+  background-color: #e74246;
+}
+.red:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #fff;
 }
 
 .header {
@@ -210,18 +224,6 @@ body {
 }
 .products .item .button {
   padding: 18px 39px;
-}
-.products .item .red {
-  background-color: #fb565a;
-}
-.products .item .red:hover {
-  background-color: #e74246;
-}
-.products .item .red:focus {
-  background-color: #e74246;
-}
-.products .item .red:active {
-  color: rgba(255, 255, 255, 0.3);
 }
 .products .item .green {
   background-color: #00ca74;
@@ -540,4 +542,265 @@ body {
 }
 .popup .form-wrapper .button:active {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.catalog-title {
+  font-size: 55px;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+  padding: 115px;
+  margin-bottom: 60px;
+}
+
+.catalog-subtitle {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+}
+
+.catalog-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px 0;
+}
+.catalog-wrapper .price {
+  flex-basis: 40%;
+}
+.catalog-wrapper .price .catalog-form {
+  margin-top: 60px;
+}
+.catalog-wrapper .radio-wrapper {
+  margin: 25px 0;
+}
+.catalog-wrapper .radio-wrapper .radio-item {
+  margin: 15px 0;
+}
+.catalog-wrapper .radio-wrapper .radio-item .radio-text {
+  display: block;
+  padding-top: 5px;
+  padding-left: 35px;
+}
+.catalog-wrapper .radio-wrapper .radio-item .radio-button {
+  display: inline-block;
+  position: absolute;
+  background: url("../img/radio-off.png") no-repeat;
+  width: 1.8em;
+  height: 1.8em;
+}
+.catalog-wrapper .radio-wrapper .radio-item .radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.catalog-wrapper .radio-wrapper .radio-item .radio:checked + .radio-button {
+  background-image: url("../img/radio-on.png");
+}
+.catalog-wrapper .radio-wrapper .radio-item .radio:hover + .radio-button {
+  background-image: url("../img/radio-off-hover.png");
+}
+.catalog-wrapper .radio-wrapper .radio-item .radio:focus + .radio-button {
+  background-image: url("../img/radio-off-hover.png");
+}
+.catalog-wrapper .radio-wrapper .radio-item .radio:checked:focus + .radio-button {
+  background-image: url("../img/radio-on-hover.png");
+}
+.catalog-wrapper .checkbox-wrapper {
+  margin: 25px 0;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item {
+  margin: 15px 0;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item .form-text {
+  position: relative;
+  padding-left: 35px;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item .form-text::before {
+  content: "";
+  background: url("../img/checkbox-off.png") no-repeat;
+  display: block;
+  position: absolute;
+  top: -3px;
+  width: 30px;
+  height: 30px;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item .form-text:hover::before {
+  content: "";
+  background: url("../img/checkbox-off-hover.png") no-repeat;
+  display: block;
+  position: absolute;
+  top: -3px;
+  width: 30px;
+  height: 30px;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item .form-text:focus::before {
+  content: "";
+  background: url("../img/checkbox-off-hover.png") no-repeat;
+  display: block;
+  position: absolute;
+  top: -3px;
+  width: 30px;
+  height: 30px;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item .form-text::after {
+  content: "";
+  background: url("../img/checkbox-on.png") no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: -3px;
+  opacity: 0;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item .form-text:hover::after {
+  content: "";
+  background: url("../img/checkbox-on-hover.png") no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: -3px;
+  opacity: 0;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item .form-text:focus::after {
+  content: "";
+  background: url("../img/checkbox-on-hover.png") no-repeat;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  top: -3px;
+  opacity: 0;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item .checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item .checkbox:checked + .form-text::after {
+  opacity: 0.6;
+}
+.catalog-wrapper .checkbox-wrapper .checkbox-item .checkbox:checked:focus + .form-text:after {
+  opacity: 1;
+}
+.catalog-wrapper .form-button {
+  background-color: #eee;
+  color: #000;
+  padding: 10px 44px;
+}
+.catalog-wrapper .form-button:hover {
+  background-color: #dfdfdf;
+}
+.catalog-wrapper .form-button:focus {
+  background-color: #dfdfdf;
+}
+.catalog-wrapper .form-button:active {
+  background-color: #d5d5d5;
+}
+
+.sort {
+  flex-basis: 70%;
+}
+.sort .sort-top {
+  display: flex;
+  justify-content: space-between;
+}
+.sort .sort-top .sort-type a {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3);
+  padding-right: 20px;
+}
+.sort .sort-top .sort-type a:hover {
+  color: #000;
+}
+.sort .product-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sort .product-wrapper .product-items {
+  position: relative;
+  width: 360px;
+  margin: 33px 0 0 0;
+}
+.sort .product-wrapper .product-items .top {
+  width: 100%;
+  height: 40px;
+  background-color: #e9e9e9;
+}
+.sort .product-wrapper .product-items .product-popuphover {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  bottom: 1px;
+  transition: all 0.6s;
+}
+.sort .product-wrapper .product-items .product-popuphover .product-popuphover-content {
+  background-color: #eee;
+  text-align: center;
+}
+.sort .product-wrapper .product-items .product-popuphover .product-popuphover-content .title {
+  padding-top: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  text-transform: uppercase;
+}
+.sort .product-wrapper .product-items .product-popuphover .product-popuphover-content .subtitle {
+  padding: 25px 0 30px 0;
+  font-size: 16px;
+  color: #666;
+}
+.sort .product-wrapper .product-items .product-popuphover .product-popuphover-content .product-button {
+  padding-bottom: 35px;
+}
+.sort .product-wrapper .product-items .product-popuphover .product-popuphover-content .product-button .button {
+  padding: 19px 60px 18px 62px;
+}
+.sort .product-wrapper .product-items:hover .top {
+  background-color: #4d4d4d;
+}
+.sort .product-wrapper .product-items:hover .product-popuphover {
+  opacity: 1;
+}
+
+.button-wrapper {
+  margin-top: 60px;
+  max-width: 450px;
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+}
+.button-wrapper .catalog-botton {
+  width: 12%;
+  border: solid 3px #dbdbdb;
+  margin-right: 11px;
+  color: #000;
+}
+.button-wrapper .catalog-botton:hover {
+  background-color: #dfdfdf;
+}
+.button-wrapper .catalog-botton:focus {
+  background-color: #dfdfdf;
+}
+.button-wrapper .catalog-botton:active {
+  background-color: #d5d5d5;
+}
+.button-wrapper .button-text {
+  width: 55%;
+  border: solid 3px #dbdbdb;
+  color: #000;
+}
+.button-wrapper .button-text:hover {
+  background-color: #dfdfdf;
+}
+.button-wrapper .button-text:focus {
+  background-color: #dfdfdf;
+}
+.button-wrapper .button-text:active {
+  background-color: #d5d5d5;
 }
